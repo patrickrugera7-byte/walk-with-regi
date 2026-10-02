@@ -1,0 +1,1980 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Walk With Regi — Premium Footwear, Crafted for Everyday Comfort</title>
+<meta name="description" content="Walk With Regi — a boutique shoe store in Tanzania. Premium sneakers, runners, boots and leather shoes. Free delivery on orders above TZS 250,000." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink:  { DEFAULT: '#171310', 900: '#0D0A08', 800: '#241E1A', 700: '#3A322C', 600: '#5C4F45', 500: '#7C6E63' },
+          cream:{ DEFAULT: '#FAF6EF', 50: '#FEFCF9', 100: '#FDFAF5', 200: '#F3ECE1', 300: '#E8DECF', 400: '#D8C9B4' },
+          terra:{ DEFAULT: '#C4603A', 50: '#FCF0EA', 100: '#F7DFD3', 300: '#E0A184', 400: '#D07B57', 500: '#C4603A', 600: '#AC5230', 700: '#8B4125' }
+        },
+        fontFamily: {
+          display: ['Fraunces', 'ui-serif', 'Georgia', 'serif'],
+          sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+        },
+        boxShadow: {
+          soft: '0 1px 2px rgba(23,19,16,.04), 0 10px 26px -16px rgba(23,19,16,.22)',
+          lift: '0 24px 50px -22px rgba(23,19,16,.38)',
+          glow: '0 22px 55px -25px rgba(196,96,58,.7)',
+          inset: 'inset 0 1px 0 rgba(255,255,255,.08)'
+        },
+        borderRadius: { '4xl': '2rem' }
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+  body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  .font-display { font-variation-settings: 'SOFT' 12, 'WONK' 1; }
+  ::selection { background: #C4603A; color: #fff; }
+  :focus-visible { outline: 2px solid #C4603A; outline-offset: 3px; border-radius: 6px; }
+
+  .reveal { opacity: 0; transform: translateY(26px); transition: opacity .85s cubic-bezier(.22,.7,.25,1), transform .85s cubic-bezier(.22,.7,.25,1); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .thin-scroll::-webkit-scrollbar { width: 7px; }
+  .thin-scroll::-webkit-scrollbar-track { background: transparent; }
+  .thin-scroll::-webkit-scrollbar-thumb { background: rgba(23,19,16,.16); border-radius: 99px; }
+  .thin-scroll::-webkit-scrollbar-thumb:hover { background: rgba(23,19,16,.28); }
+
+  @keyframes floaty { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-12px) } }
+  .animate-floaty { animation: floaty 7s ease-in-out infinite; }
+
+  @keyframes pulseRing { 0% { transform: scale(.85); opacity: .8 } 70% { transform: scale(1.6); opacity: 0 } 100% { opacity: 0 } }
+  .pulse-ring::after {
+    content: ''; position: absolute; inset: 0; border-radius: 9999px;
+    background: #C4603A; animation: pulseRing 2.4s cubic-bezier(.24,.6,.35,1) infinite; z-index: -1;
+  }
+
+  @keyframes slideUpIn { from { opacity: 0; transform: translateY(14px) } to { opacity: 1; transform: none } }
+  .anim-in { animation: slideUpIn .5s cubic-bezier(.22,.7,.25,1) both; }
+
+  .star-track { display: inline-flex; gap: 2px; }
+
+  .terrain-lines {
+    background-image: radial-gradient(circle at 1px 1px, rgba(23,19,16,.07) 1px, transparent 0);
+    background-size: 22px 22px;
+  }
+
+  input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  input[type=number] { -moz-appearance: textfield; }
+
+  .field {
+    width: 100%; border-radius: 0.875rem; border: 1px solid rgba(23,19,16,.12);
+    background: #fff; padding: 0.75rem 0.9rem; font-size: 0.9rem; color: #171310;
+    transition: border-color .2s, box-shadow .2s, background .2s;
+  }
+  .field::placeholder { color: rgba(23,19,16,.35); }
+  .field:focus { outline: none; border-color: #C4603A; box-shadow: 0 0 0 4px rgba(196,96,58,.12); }
+  .field:disabled { background: #F3ECE1; color: rgba(23,19,16,.5); }
+
+  .pay-card { position: relative; }
+  .pay-card input { position: absolute; opacity: 0; pointer-events: none; }
+  .pay-card .pay-body {
+    display: flex; align-items: center; gap: .75rem; cursor: pointer;
+    border: 1px solid rgba(23,19,16,.12); border-radius: .875rem; padding: .7rem .85rem;
+    background: #fff; transition: all .22s ease;
+  }
+  .pay-card input:checked + .pay-body {
+    border-color: #C4603A; background: #FCF0EA; box-shadow: 0 0 0 3px rgba(196,96,58,.10);
+  }
+  .pay-card input:focus-visible + .pay-body { outline: 2px solid #C4603A; outline-offset: 2px; }
+
+  .size-btn, .color-btn { transition: all .18s ease; }
+  .size-btn.active, .color-btn.active { border-color: #C4603A; background: #C4603A; color: #fff; }
+  .color-btn.active .swatch-label { color: #fff; }
+
+  .thumb.active { border-color: #C4603A; box-shadow: 0 0 0 3px rgba(196,96,58,.15); }
+
+  .masonry-mask { mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent); }
+</style>
+</head>
+<body class="font-sans bg-cream text-ink antialiased selection:bg-terra selection:text-white">
+
+<!-- ============ OFFERS / PROMOTIONS BAR ============ -->
+<div class="relative bg-ink-900 text-cream/90 overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.07]" style="background-image: repeating-linear-gradient(115deg, #fff 0 2px, transparent 2px 26px);"></div>
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-center gap-3 py-2.5 text-[11px] sm:text-[12.5px] tracking-wide">
+      <span class="hidden sm:inline-flex h-1.5 w-1.5 rounded-full bg-terra-400"></span>
+      <p id="offerRotator" class="transition-all duration-500 text-center font-medium">
+        <span class="text-terra-300 font-semibold">★</span> 20% OFF new arrivals — use code <span class="font-bold text-white tracking-wider">WALKWITHREGI20</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="sticky top-0 z-50">
+  <div class="border-b border-ink/5 bg-cream/80 backdrop-blur-xl supports-[backdrop-filter]:bg-cream/70">
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Main">
+      <div class="flex h-16 sm:h-[74px] items-center justify-between gap-4">
+
+        <!-- Logo -->
+        <a href="#home" class="group flex items-center gap-2.5 shrink-0" aria-label="Walk With Regi home">
+          <span class="relative grid h-10 w-10 place-items-center rounded-[13px] bg-terra text-cream shadow-glow transition-transform duration-300 group-hover:-rotate-6">
+            <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 17.5c0-1 .6-1.6 1.4-2l3-1.5c.9-.5 1.6-1.2 2-2.1l1.2-2.6c.4-.9 1.4-1.3 2.3-1 .7.2 1.2.9 1.1 1.7l-.1 1.1c0 .6.3 1.1.8 1.3l4.3 1.6c.8.3 1.3 1 1.3 1.8v.7H3v-.6Z"/>
+              <path d="M7.5 12.2 5.8 14M10.6 13.6l-1 1.6"/>
+            </svg>
+          </span>
+          <span class="leading-none">
+            <span class="block font-display text-[17px] sm:text-[19px] font-semibold tracking-tight text-ink">Walk With Regi</span>
+            <span class="block text-[9.5px] uppercase tracking-[0.22em] text-ink-500 mt-0.5">Footwear Atelier</span>
+          </span>
+        </a>
+
+        <!-- Desktop links -->
+        <ul class="hidden lg:flex items-center gap-1 text-[14.5px] font-medium text-ink-700">
+          <li><a class="relative rounded-full px-4 py-2 transition hover:bg-ink/5 hover:text-ink" href="#home">Home</a></li>
+          <li><a class="relative rounded-full px-4 py-2 transition hover:bg-ink/5 hover:text-ink" href="#shop">Shop</a></li>
+          <li><a class="relative rounded-full px-4 py-2 transition hover:bg-ink/5 hover:text-ink" href="#offers">Offers</a></li>
+          <li><a class="relative rounded-full px-4 py-2 transition hover:bg-ink/5 hover:text-ink" href="#about">About</a></li>
+          <li><a class="relative rounded-full px-4 py-2 transition hover:bg-ink/5 hover:text-ink" href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-2">
+          <a href="#shop" class="hidden xl:inline-flex items-center gap-2 rounded-full border border-ink/10 bg-white/70 px-4 py-2 text-[13px] font-medium text-ink-700 transition hover:border-terra/40 hover:text-terra-600">
+            <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+            Search
+          </a>
+
+          <button id="cartToggle" type="button" aria-label="Open shopping cart"
+            class="relative grid h-11 w-11 place-items-center rounded-full border border-ink/10 bg-white/70 text-ink transition hover:border-terra/50 hover:bg-terra-50 hover:text-terra-600">
+            <svg viewBox="0 0 24 24" class="h-[19px] w-[19px]" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 4h2l1.6 10.4a2 2 0 0 0 2 1.7h7.7a2 2 0 0 0 2-1.6L20 7H6"/>
+              <circle cx="9.5" cy="19.5" r="1.4"/><circle cx="17" cy="19.5" r="1.4"/>
+            </svg>
+            <span id="cartBadge" class="absolute -right-0.5 -top-0.5 grid h-5 min-w-[20px] place-items-center rounded-full bg-terra px-1 text-[10.5px] font-bold text-white shadow-md scale-0 transition-transform duration-300">0</span>
+          </button>
+
+          <button id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false"
+            class="grid h-11 w-11 place-items-center rounded-full border border-ink/10 bg-white/70 text-ink transition hover:border-terra/50 hover:text-terra-600 lg:hidden">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round">
+              <path d="M4 7h16M4 12h16M4 17h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="overflow-hidden max-h-0 transition-[max-height] duration-500 ease-in-out lg:hidden">
+      <div class="mx-auto max-w-7xl px-4 pb-5 sm:px-6">
+        <ul class="grid gap-1 border-t border-ink/5 pt-4 text-[15px] font-medium text-ink-700">
+          <li><a class="block rounded-xl px-4 py-3 transition hover:bg-terra-50 hover:text-terra-600" href="#home" data-mobile-link>Home</a></li>
+          <li><a class="block rounded-xl px-4 py-3 transition hover:bg-terra-50 hover:text-terra-600" href="#shop" data-mobile-link>Shop</a></li>
+          <li><a class="block rounded-xl px-4 py-3 transition hover:bg-terra-50 hover:text-terra-600" href="#offers" data-mobile-link>Offers</a></li>
+          <li><a class="block rounded-xl px-4 py-3 transition hover:bg-terra-50 hover:text-terra-600" href="#about" data-mobile-link>About</a></li>
+          <li><a class="block rounded-xl px-4 py-3 transition hover:bg-terra-50 hover:text-terra-600" href="#contact" data-mobile-link>Contact</a></li>
+        </ul>
+        <a href="#shop" data-mobile-link class="mt-3 flex items-center justify-center gap-2 rounded-xl bg-ink px-4 py-3 text-[14px] font-semibold text-cream">
+          Shop the collection
+          <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="relative isolate overflow-hidden bg-ink-900 text-cream">
+  <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&w=1920&q=80"
+       alt="A pair of premium sneakers photographed in warm light"
+       class="absolute inset-0 h-full w-full object-cover object-center opacity-[0.55]" />
+  <div class="absolute inset-0 bg-gradient-to-r from-ink-900 via-ink-900/85 to-ink-900/25"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-ink-900 via-transparent to-ink-900/50"></div>
+
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36">
+    <div class="grid items-center gap-14 lg:grid-cols-12">
+
+      <div class="lg:col-span-7">
+        <span class="inline-flex items-center gap-2 rounded-full border border-cream/15 bg-white/[0.07] px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-terra-300 backdrop-blur-sm">
+          <span class="relative grid h-1.5 w-1.5 place-items-center"><span class="h-1.5 w-1.5 rounded-full bg-terra-400"></span></span>
+          New Season · Regi Autumn Drop
+        </span>
+
+        <h1 class="mt-6 font-display text-[38px] leading-[1.05] sm:text-[54px] lg:text-[66px] font-semibold tracking-[-0.02em]">
+          Step Into Comfort,<br class="hidden sm:block" />
+          Walk With <span class="relative inline-block text-terra-400 italic">Confidence<svg class="absolute -bottom-2 left-0 w-full" height="10" viewBox="0 0 200 10" fill="none" preserveAspectRatio="none"><path d="M2 7.5C50 2.5 150 2.5 198 6" stroke="#C4603A" stroke-width="3" stroke-linecap="round"/></svg></span>
+        </h1>
+
+        <p class="mt-7 max-w-xl text-[15.5px] sm:text-[17px] leading-relaxed text-cream/70">
+          Handpicked footwear, built for the long walk. From the streets of Dar to the trails of Kilimanjaro — every pair is tested for comfort, durability and quiet style.
+        </p>
+
+        <div class="mt-9 flex flex-wrap items-center gap-3">
+          <a href="#shop" class="group inline-flex items-center gap-2.5 rounded-full bg-terra px-7 py-3.5 text-[14.5px] font-semibold text-white shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:bg-terra-600">
+            Shop Now
+            <svg viewBox="0 0 24 24" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+          <a href="#offers" class="inline-flex items-center gap-2 rounded-full border border-cream/20 bg-white/[0.05] px-6 py-3.5 text-[14.5px] font-medium text-cream backdrop-blur-sm transition hover:border-cream/40 hover:bg-white/10">
+            View current offers
+          </a>
+        </div>
+
+        <div class="mt-12 flex flex-wrap items-center gap-x-9 gap-y-5 border-t border-cream/10 pt-7">
+          <div>
+            <p class="font-display text-2xl font-semibold text-cream">12k+</p>
+            <p class="mt-0.5 text-[11.5px] uppercase tracking-widest text-cream/45">Pairs delivered</p>
+          </div>
+          <div class="h-9 w-px bg-cream/10"></div>
+          <div>
+            <p class="font-display text-2xl font-semibold text-cream">4.9<span class="text-terra-400">★</span></p>
+            <p class="mt-0.5 text-[11.5px] uppercase tracking-widest text-cream/45">2,400 reviews</p>
+          </div>
+          <div class="h-9 w-px bg-cream/10"></div>
+          <div>
+            <p class="font-display text-2xl font-semibold text-cream">2–3</p>
+            <p class="mt-0.5 text-[11.5px] uppercase tracking-widest text-cream/45">Day delivery</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating hero card -->
+      <div class="lg:col-span-5 lg:justify-self-end w-full max-w-sm">
+        <div class="animate-floaty rounded-4xl border border-cream/12 bg-white/[0.06] p-5 backdrop-blur-xl shadow-lift">
+          <div class="flex items-center gap-4">
+            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=300&q=80"
+                 alt="Regi Heritage Low sneaker" class="h-20 w-20 rounded-2xl object-cover ring-1 ring-cream/15" />
+            <div class="min-w-0">
+              <p class="text-[10.5px] uppercase tracking-[0.18em] text-terra-300">Best seller</p>
+              <p class="mt-1 font-display text-[17px] font-semibold leading-tight text-cream">Regi Heritage Low</p>
+              <p class="mt-1 text-[13px] text-cream/55">TZS 189,000 <span class="ml-1 text-cream/30 line-through">235,000</span></p>
+            </div>
+          </div>
+          <div class="mt-5 grid grid-cols-3 gap-2 text-center">
+            <div class="rounded-2xl bg-white/[0.05] px-2 py-3">
+              <p class="text-[10px] uppercase tracking-wider text-cream/45">Cushion</p>
+              <p class="mt-1 text-[13px] font-semibold text-cream">Soft</p>
+            </div>
+            <div class="rounded-2xl bg-white/[0.05] px-2 py-3">
+              <p class="text-[10px] uppercase tracking-wider text-cream/45">Grip</p>
+              <p class="mt-1 text-[13px] font-semibold text-cream">High</p>
+            </div>
+            <div class="rounded-2xl bg-white/[0.05] px-2 py-3">
+              <p class="text-[10px] uppercase tracking-wider text-cream/45">Weight</p>
+              <p class="mt-1 text-[13px] font-semibold text-cream">260g</p>
+            </div>
+          </div>
+          <button data-quick-add="p1" class="mt-4 w-full rounded-2xl bg-cream py-3 text-[13.5px] font-semibold text-ink transition hover:bg-terra hover:text-white">
+            Add to cart — TZS 189,000
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE STRIP ============ -->
+<div class="border-y border-ink/8 bg-cream-200/60">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between gap-6 overflow-x-auto no-scrollbar py-4 text-[12px] font-medium text-ink-600">
+      <span class="flex items-center gap-2 whitespace-nowrap"><svg class="h-4 w-4 text-terra" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h13v8H3zM16 10h3l2 3v2h-5z"/><circle cx="7" cy="17" r="1.6"/><circle cx="18" cy="17" r="1.6"/></svg> Free delivery above TZS 250,000</span>
+      <span class="hidden h-4 w-px bg-ink/10 sm:block"></span>
+      <span class="flex items-center gap-2 whitespace-nowrap"><svg class="h-4 w-4 text-terra" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 7 9.5 17.5 4 12"/></svg> 30-day easy returns</span>
+      <span class="hidden h-4 w-px bg-ink/10 sm:block"></span>
+      <span class="flex items-center gap-2 whitespace-nowrap"><svg class="h-4 w-4 text-terra" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3 4 6v6c0 4.5 3.4 8.4 8 9 4.6-.6 8-4.5 8-9V6l-8-3Z"/></svg> 100% authentic guarantee</span>
+      <span class="hidden h-4 w-px bg-ink/10 sm:block"></span>
+      <span class="flex items-center gap-2 whitespace-nowrap"><svg class="h-4 w-4 text-terra" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="9"/></svg> Same-day dispatch before 3PM</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PRODUCT CATALOG ============ -->
+<section id="shop" class="relative py-16 sm:py-24">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+    <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+      <div class="max-w-xl reveal">
+        <span class="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-terra-600">
+          <span class="h-px w-8 bg-terra"></span> The Collection
+        </span>
+        <h2 class="mt-4 font-display text-[32px] sm:text-[42px] font-semibold leading-[1.08] tracking-[-0.02em] text-ink">
+          Every pair, made to be walked in
+        </h2>
+        <p class="mt-4 text-[15px] leading-relaxed text-ink-600">
+          Curated silhouettes from premium makers — selected for comfort, longevity and a look that works from morning meetings to evening strolls.
+        </p>
+      </div>
+
+      <div class="flex items-center gap-3 reveal">
+        <div class="relative">
+          <svg viewBox="0 0 24 24" class="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-ink/35" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+          <input id="searchInput" type="search" placeholder="Search shoes…" aria-label="Search products"
+            class="w-full sm:w-56 rounded-full border border-ink/10 bg-white py-2.5 pl-10 pr-4 text-[13.5px] text-ink placeholder:text-ink/35 transition focus:border-terra focus:outline-none focus:ring-4 focus:ring-terra/10" />
+        </div>
+        <div class="relative">
+          <select id="sortSelect" aria-label="Sort products"
+            class="appearance-none rounded-full border border-ink/10 bg-white py-2.5 pl-4 pr-10 text-[13.5px] font-medium text-ink transition focus:border-terra focus:outline-none focus:ring-4 focus:ring-terra/10">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: Low → High</option>
+            <option value="price-desc">Price: High → Low</option>
+            <option value="rating">Top rated</option>
+          </select>
+          <svg viewBox="0 0 24 24" class="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-ink/40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category chips -->
+    <div class="mt-9 flex flex-wrap items-center gap-2 reveal" id="categoryChips"></div>
+
+    <div class="mt-6 flex items-center justify-between border-b border-ink/8 pb-4">
+      <p class="text-[13px] text-ink-500"><span id="resultCount" class="font-semibold text-ink">0</span> products</p>
+      <button id="clearFilters" class="hidden text-[13px] font-medium text-terra-600 underline decoration-terra/30 underline-offset-4 transition hover:decoration-terra">Clear filters</button>
+    </div>
+
+    <div id="productGrid" class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:gap-6"></div>
+
+    <div id="emptyState" class="hidden py-20 text-center">
+      <div class="mx-auto grid h-16 w-16 place-items-center rounded-full bg-cream-200 text-ink/40">
+        <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+      </div>
+      <p class="mt-5 font-display text-xl font-semibold text-ink">No shoes match that search</p>
+      <p class="mt-2 text-[14px] text-ink-500">Try a different keyword or clear your filters.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OFFERS ============ -->
+<section id="offers" class="relative overflow-hidden bg-ink-900 py-16 sm:py-24 text-cream">
+  <div class="absolute inset-0 opacity-[0.06]" style="background-image: radial-gradient(circle at 1px 1px, #fff 1px, transparent 0); background-size: 26px 26px;"></div>
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+    <div class="flex flex-col gap-5 md:flex-row md:items-end md:justify-between reveal">
+      <div class="max-w-lg">
+        <span class="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-terra-300">
+          <span class="h-px w-8 bg-terra"></span> Limited time
+        </span>
+        <h2 class="mt-4 font-display text-[32px] sm:text-[42px] font-semibold leading-[1.08] tracking-[-0.02em]">
+          Offers worth walking for
+        </h2>
+      </div>
+      <p class="max-w-sm text-[14.5px] leading-relaxed text-cream/60">
+        Offers rotate monthly. Apply your code at checkout — discounts are applied automatically to eligible items.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-5 lg:grid-cols-12">
+
+      <!-- Big offer -->
+      <article class="reveal relative overflow-hidden rounded-4xl bg-terra p-8 sm:p-10 lg:col-span-7">
+        <div class="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-white/10"></div>
+        <div class="absolute -bottom-24 -left-10 h-64 w-64 rounded-full bg-ink-900/10"></div>
+        <div class="relative">
+          <p class="inline-flex items-center rounded-full bg-white/20 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-white">Save 20%</p>
+          <h3 class="mt-6 font-display text-[30px] sm:text-[40px] font-semibold leading-tight text-white">
+            New arrivals,<br />20% off the whole drop
+          </h3>
+          <p class="mt-4 max-w-md text-[14.5px] leading-relaxed text-white/80">
+            The freshest silhouettes for the season. Use the code below at checkout and watch the price drop.
+          </p>
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <div class="flex items-center gap-3 rounded-2xl border border-dashed border-white/40 bg-white/10 px-4 py-3">
+              <span class="text-[10.5px] uppercase tracking-[0.18em] text-white/70">Code</span>
+              <span id="promoCodeBig" class="font-mono text-[15px] font-bold tracking-widest text-white">WALKWITHREGI20</span>
+              <button data-copy="WALKWITHREGI20" class="rounded-lg bg-white/15 p-1.5 transition hover:bg-white/30" aria-label="Copy promo code">
+                <svg viewBox="0 0 24 24" class="h-4 w-4 text-white" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>
+              </button>
+            </div>
+            <a href="#shop" class="inline-flex items-center gap-2 rounded-full bg-ink-900 px-6 py-3.5 text-[14px] font-semibold text-cream transition hover:-translate-y-0.5 hover:bg-ink">
+              Shop new arrivals
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Two stacked offers -->
+      <div class="grid gap-5 lg:col-span-5">
+        <article class="reveal rounded-4xl border border-cream/12 bg-white/[0.045] p-7 backdrop-blur-sm">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-terra-300">Free delivery</p>
+              <h3 class="mt-3 font-display text-[22px] font-semibold leading-snug">On every order above TZS 250,000</h3>
+              <p class="mt-2.5 text-[13.5px] leading-relaxed text-cream/55">Nationwide shipping to Dar, Arusha, Mwanza, Dodoma and beyond.</p>
+            </div>
+            <span class="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-terra/15 text-terra-300">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h13v8H3zM16 10h3l2 3v2h-5z"/><circle cx="7" cy="17" r="1.6"/><circle cx="18" cy="17" r="1.6"/></svg>
+            </span>
+          </div>
+        </article>
+
+        <article class="reveal rounded-4xl border border-cream/12 bg-white/[0.045] p-7 backdrop-blur-sm">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-terra-300">Bundle deal</p>
+              <h3 class="mt-3 font-display text-[22px] font-semibold leading-snug">Buy 2 pairs, get a premium care kit free</h3>
+              <p class="mt-2.5 text-[13.5px] leading-relaxed text-cream/55">Brush, cleaner and deodoriser set — while stock lasts.</p>
+            </div>
+            <span class="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-terra/15 text-terra-300">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7 9.5 17.5 4 12"/></svg>
+            </span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY SHOP WITH US ============ -->
+<section id="about" class="terrain-lines py-16 sm:py-24">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="grid gap-14 lg:grid-cols-12">
+
+      <div class="lg:col-span-5 reveal">
+        <span class="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-terra-600">
+          <span class="h-px w-8 bg-terra"></span> Why shop with us
+        </span>
+        <h2 class="mt-4 font-display text-[32px] sm:text-[42px] font-semibold leading-[1.08] tracking-[-0.02em] text-ink">
+          A small shop with big standards
+        </h2>
+        <p class="mt-5 text-[15px] leading-relaxed text-ink-600">
+          Walk With Regi started in a single room in Kariakoo. Today we still open every box by hand, try on every sample, and only list the pairs we'd happily wear ourselves.
+        </p>
+
+        <div class="mt-8 flex items-center gap-4 rounded-3xl border border-ink/8 bg-white p-5 shadow-soft">
+          <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=200&q=80" alt="Regi, founder" class="h-14 w-14 rounded-2xl object-cover" />
+          <div>
+            <p class="font-display text-[16px] font-semibold text-ink">Regi Mwakasege</p>
+            <p class="text-[13px] text-ink-500">Founder & resident shoe nerd</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7">
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="reveal rounded-3xl border border-ink/8 bg-white p-6 shadow-soft transition duration-500 hover:-translate-y-1 hover:shadow-lift">
+            <span class="grid h-12 w-12 place-items-center rounded-2xl bg-terra-50 text-terra-600">
+              <svg viewBox="0 0 24 24" class="h-5.5 w-5.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.4 8.4 8 9 4.6-.6 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+            </span>
+            <h3 class="mt-5 font-display text-[19px] font-semibold text-ink">100% authentic</h3>
+            <p class="mt-2 text-[13.5px] leading-relaxed text-ink-600">Direct from verified makers and official distributors. Every pair comes with a Regi authenticity tag.</p>
+          </div>
+
+          <div class="reveal rounded-3xl border border-ink/8 bg-white p-6 shadow-soft transition duration-500 hover:-translate-y-1 hover:shadow-lift">
+            <span class="grid h-12 w-12 place-items-center rounded-2xl bg-terra-50 text-terra-600">
+              <svg viewBox="0 0 24 24" class="h-5.5 w-5.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h13v8H3zM16 10h3l2 3v2h-5z"/><circle cx="7" cy="17" r="1.6"/><circle cx="18" cy="17" r="1.6"/></svg>
+            </span>
+            <h3 class="mt-5 font-display text-[19px] font-semibold text-ink">Fast, free delivery</h3>
+            <p class="mt-2 text-[13.5px] leading-relaxed text-ink-600">Same-day dispatch and 2–3 day nationwide delivery. Free above TZS 250,000.</p>
+          </div>
+
+          <div class="reveal rounded-3xl border border-ink/8 bg-white p-6 shadow-soft transition duration-500 hover:-translate-y-1 hover:shadow-lift">
+            <span class="grid h-12 w-12 place-items-center rounded-2xl bg-terra-50 text-terra-600">
+              <svg viewBox="0 0 24 24" class="h-5.5 w-5.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>
+            </span>
+            <h3 class="mt-5 font-display text-[19px] font-semibold text-ink">30-day returns</h3>
+            <p class="mt-2 text-[13.5px] leading-relaxed text-ink-600">Wrong size? Changed your mind? Send them back within 30 days, no awkward questions.</p>
+          </div>
+
+          <div class="reveal rounded-3xl border border-ink/8 bg-white p-6 shadow-soft transition duration-500 hover:-translate-y-1 hover:shadow-lift">
+            <span class="grid h-12 w-12 place-items-center rounded-2xl bg-terra-50 text-terra-600">
+              <svg viewBox="0 0 24 24" class="h-5.5 w-5.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </span>
+            <h3 class="mt-5 font-display text-[19px] font-semibold text-ink">Real human support</h3>
+            <p class="mt-2 text-[13.5px] leading-relaxed text-ink-600">Message us on WhatsApp and get a sizing answer in minutes — not a bot, a person.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="bg-cream-200/70 py-16 sm:py-24">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+    <div class="flex flex-col items-center text-center reveal">
+      <span class="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-terra-600">
+        <span class="h-px w-8 bg-terra"></span> Loved by walkers
+        <span class="h-px w-8 bg-terra"></span>
+      </span>
+      <h2 class="mt-4 max-w-2xl font-display text-[32px] sm:text-[42px] font-semibold leading-[1.1] tracking-[-0.02em] text-ink">
+        2,400+ happy feet across Tanzania
+      </h2>
+    </div>
+
+    <div class="relative mt-12 reveal">
+      <div class="overflow-hidden rounded-4xl">
+        <div id="testimonialTrack" class="flex transition-transform duration-700 ease-[cubic-bezier(.22,.7,.25,1)]"></div>
+      </div>
+
+      <div class="mt-7 flex items-center justify-center gap-5">
+        <button id="tPrev" aria-label="Previous testimonial" class="grid h-11 w-11 place-items-center rounded-full border border-ink/12 bg-white text-ink transition hover:border-terra hover:bg-terra hover:text-white">
+          <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m15 5-7 7 7 7"/></svg>
+        </button>
+        <div id="tDots" class="flex items-center gap-2"></div>
+        <button id="tNext" aria-label="Next testimonial" class="grid h-11 w-11 place-items-center rounded-full border border-ink/12 bg-white text-ink transition hover:border-terra hover:bg-terra hover:text-white">
+          <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m9 5 7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="reveal relative overflow-hidden rounded-4xl bg-ink px-7 py-12 sm:px-14 sm:py-16 text-cream">
+      <div class="absolute -right-20 -top-24 h-72 w-72 rounded-full bg-terra/25 blur-3xl"></div>
+      <div class="absolute -bottom-28 left-1/4 h-72 w-72 rounded-full bg-terra/10 blur-3xl"></div>
+      <div class="relative grid items-center gap-8 lg:grid-cols-2">
+        <div>
+          <h2 class="font-display text-[30px] sm:text-[38px] font-semibold leading-[1.1] tracking-[-0.02em]">
+            Get TZS 15,000 off your first pair
+          </h2>
+          <p class="mt-4 max-w-md text-[14.5px] leading-relaxed text-cream/65">
+            Join the Regi list for early access to drops, restocks and members-only offers. No spam — just shoes.
+          </p>
+        </div>
+        <form id="newsletterForm" class="flex flex-col gap-3 sm:flex-row lg:justify-end">
+          <label class="sr-only" for="newsletterEmail">Email address</label>
+          <input id="newsletterEmail" type="email" required placeholder="you@example.com"
+            class="w-full rounded-2xl border border-cream/15 bg-white/[0.06] px-5 py-3.5 text-[14px] text-cream placeholder:text-cream/40 backdrop-blur-sm transition focus:border-terra-400 focus:outline-none focus:ring-4 focus:ring-terra/20 sm:w-72" />
+          <button type="submit" class="shrink-0 rounded-2xl bg-terra px-7 py-3.5 text-[14px] font-semibold text-white transition hover:-translate-y-0.5 hover:bg-terra-600 shadow-glow">
+            Get my code
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="contact" class="border-t border-ink/8 bg-cream-200/60">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
+    <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-12">
+
+      <div class="lg:col-span-4">
+        <div class="flex items-center gap-2.5">
+          <span class="grid h-10 w-10 place-items-center rounded-[13px] bg-terra text-cream">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 17.5c0-1 .6-1.6 1.4-2l3-1.5c.9-.5 1.6-1.2 2-2.1l1.2-2.6c.4-.9 1.4-1.3 2.3-1 .7.2 1.2.9 1.1 1.7l-.1 1.1c0 .6.3 1.1.8 1.3l4.3 1.6c.8.3 1.3 1 1.3 1.8v.7H3v-.6Z"/>
+            </svg>
+          </span>
+          <span class="font-display text-[19px] font-semibold tracking-tight text-ink">Walk With Regi</span>
+        </div>
+        <p class="mt-5 max-w-sm text-[14px] leading-relaxed text-ink-600">
+          Footwear crafted for the long walk. Premium comfort, honest prices, delivered across Tanzania.
+        </p>
+
+        <div class="mt-6 flex items-center gap-2.5">
+          <a href="#" aria-label="Instagram" class="grid h-10 w-10 place-items-center rounded-full border border-ink/10 bg-white text-ink-600 transition hover:-translate-y-0.5 hover:border-terra hover:bg-terra hover:text-white">
+            <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" class="grid h-10 w-10 place-items-center rounded-full border border-ink/10 bg-white text-ink-600 transition hover:-translate-y-0.5 hover:border-terra hover:bg-terra hover:text-white">
+            <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.5V4.3c-.3 0-1.4-.1-2.6-.1-2.6 0-4.3 1.5-4.3 4.3v2H7.2v3h2.5V21h3.8Z"/></svg>
+          </a>
+          <a href="#" aria-label="X" class="grid h-10 w-10 place-items-center rounded-full border border-ink/10 bg-white text-ink-600 transition hover:-translate-y-0.5 hover:border-terra hover:bg-terra hover:text-white">
+            <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M17.5 3h3.2l-7 8 7.3 10h-5.7l-4.5-6.2L5.6 21H2.4l7.3-8.4L2.7 3h5.8l4.2 5.8L17.5 3Zm-1.1 16h1.7L7.7 4.7H5.9L16.4 19Z"/></svg>
+          </a>
+          <a href="#" aria-label="WhatsApp" class="grid h-10 w-10 place-items-center rounded-full border border-ink/10 bg-white text-ink-600 transition hover:-translate-y-0.5 hover:border-terra hover:bg-terra hover:text-white">
+            <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 1.8a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8Zm-3.2 4c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.7 4.2 3.7 2.1.8 2.5.7 3 .6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2 0-.1-.2-.2-.4-.3l-1.5-.7c-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.3.1-.4l.5-.6c.1-.2.2-.3.1-.5l-.7-1.6c-.2-.4-.3-.4-.5-.4h-.3Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-2">
+        <h3 class="text-[12px] font-bold uppercase tracking-[0.16em] text-ink">Shop</h3>
+        <ul class="mt-5 space-y-3 text-[14px] text-ink-600">
+          <li><a class="transition hover:text-terra-600" href="#shop">All shoes</a></li>
+          <li><a class="transition hover:text-terra-600" href="#shop">Sneakers</a></li>
+          <li><a class="transition hover:text-terra-600" href="#shop">Running</a></li>
+          <li><a class="transition hover:text-terra-600" href="#shop">Boots</a></li>
+          <li><a class="transition hover:text-terra-600" href="#shop">Formal</a></li>
+        </ul>
+      </div>
+
+      <div class="lg:col-span-2">
+        <h3 class="text-[12px] font-bold uppercase tracking-[0.16em] text-ink">Company</h3>
+        <ul class="mt-5 space-y-3 text-[14px] text-ink-600">
+          <li><a class="transition hover:text-terra-600" href="#about">About us</a></li>
+          <li><a class="transition hover:text-terra-600" href="#offers">Offers</a></li>
+          <li><a class="transition hover:text-terra-600" href="#">Size guide</a></li>
+          <li><a class="transition hover:text-terra-600" href="#">Shipping & returns</a></li>
+          <li><a class="transition hover:text-terra-600" href="#">Privacy policy</a></li>
+        </ul>
+      </div>
+
+      <div class="lg:col-span-4">
+        <h3 class="text-[12px] font-bold uppercase tracking-[0.16em] text-ink">Get in touch</h3>
+        <ul class="mt-5 space-y-3.5 text-[14px] text-ink-600">
+          <li class="flex items-start gap-3">
+            <svg viewBox="0 0 24 24" class="mt-0.5 h-4.5 w-4.5 shrink-0 text-terra" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            <span>Samora Avenue, Kariakoo<br />Dar es Salaam, Tanzania</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg viewBox="0 0 24 24" class="h-4.5 w-4.5 shrink-0 text-terra" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2Z"/></svg>
+            <a class="transition hover:text-terra-600" href="tel:+255700000000">+255 700 000 000</a>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg viewBox="0 0 24 24" class="h-4.5 w-4.5 shrink-0 text-terra" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+            <a class="transition hover:text-terra-600" href="mailto:hello@walkwithregi.co.tz">hello@walkwithregi.co.tz</a>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg viewBox="0 0 24 24" class="h-4.5 w-4.5 shrink-0 text-terra" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            <span>Mon–Sat, 8:30 AM – 7:00 PM</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-14 flex flex-col gap-6 border-t border-ink/8 pt-8 md:flex-row md:items-center md:justify-between">
+      <div class="flex flex-wrap items-center gap-2.5">
+        <span class="mr-1 text-[12px] font-medium text-ink-500">We accept</span>
+        <span class="grid h-9 w-14 place-items-center rounded-lg border border-ink/10 bg-white text-[10px] font-bold tracking-wide text-ink-600">M-PESA</span>
+        <span class="grid h-9 w-14 place-items-center rounded-lg border border-ink/10 bg-white text-[10px] font-bold tracking-wide text-ink-600">TIGO</span>
+        <span class="grid h-9 w-14 place-items-center rounded-lg border border-ink/10 bg-white text-[10px] font-bold tracking-wide text-ink-600">AIRTEL</span>
+        <span class="grid h-9 w-14 place-items-center rounded-lg border border-ink/10 bg-white text-[10px] font-bold tracking-wide text-ink-600">HALO</span>
+        <span class="grid h-9 w-14 place-items-center rounded-lg border border-ink/10 bg-white">
+          <svg viewBox="0 0 60 20" class="h-4" aria-label="Visa"><text x="0" y="15" font-family="Inter,sans-serif" font-size="15" font-weight="800" fill="#1A1F71">VISA</text></svg>
+        </span>
+        <span class="grid h-9 w-14 place-items-center rounded-lg border border-ink/10 bg-white">
+          <svg viewBox="0 0 40 22" class="h-5" aria-label="Mastercard"><circle cx="15" cy="11" r="8" fill="#EB001B"/><circle cx="25" cy="11" r="8" fill="#F79E1B" fill-opacity=".9"/></svg>
+        </span>
+      </div>
+      <p class="text-[12.5px] text-ink-500">© <span id="year"></span> Walk With Regi. All rights reserved. Made in Dar es Salaam.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ CART DRAWER ============ -->
+<div id="cartBackdrop" class="fixed inset-0 z-[60] bg-ink-900/50 opacity-0 pointer-events-none backdrop-blur-sm transition-opacity duration-400"></div>
+
+<aside id="cartDrawer" role="dialog" aria-modal="true" aria-label="Shopping cart"
+  class="fixed right-0 top-0 z-[65] flex h-full w-full max-w-[430px] translate-x-full flex-col bg-cream shadow-lift transition-transform duration-500 ease-[cubic-bezier(.22,.7,.25,1)]">
+
+  <header class="flex items-center justify-between border-b border-ink/8 px-5 py-5 sm:px-6">
+    <div>
+      <h2 class="font-display text-[21px] font-semibold text-ink">Your cart</h2>
+      <p id="cartItemCountLabel" class="mt-0.5 text-[12.5px] text-ink-500">0 items</p>
+    </div>
+    <button id="cartClose" aria-label="Close cart" class="grid h-10 w-10 place-items-center rounded-full border border-ink/10 bg-white text-ink transition hover:border-terra hover:text-terra-600">
+      <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </header>
+
+  <!-- Free delivery progress -->
+  <div id="shippingProgressWrap" class="border-b border-ink/8 bg-cream-100 px-5 py-4 sm:px-6">
+    <p id="shippingProgressText" class="text-[12.5px] font-medium text-ink-600"></p>
+    <div class="mt-2.5 h-1.5 w-full overflow-hidden rounded-full bg-ink/8">
+      <div id="shippingProgressBar" class="h-full w-0 rounded-full bg-terra transition-all duration-500"></div>
+    </div>
+  </div>
+
+  <div id="cartItems" class="thin-scroll flex-1 overflow-y-auto px-5 py-5 sm:px-6"></div>
+
+  <footer id="cartFooter" class="border-t border-ink/8 bg-cream-100 px-5 py-5 sm:px-6">
+    <dl class="space-y-2.5 text-[13.5px]">
+      <div class="flex items-center justify-between">
+        <dt class="text-ink-600">Subtotal</dt>
+        <dd id="cartSubtotal" class="font-medium text-ink">TZS 0</dd>
+      </div>
+      <div class="flex items-center justify-between">
+        <dt class="text-ink-600">Delivery</dt>
+        <dd id="cartDelivery" class="font-medium text-ink">TZS 0</dd>
+      </div>
+      <div class="flex items-center justify-between border-t border-ink/8 pt-3">
+        <dt class="font-display text-[16px] font-semibold text-ink">Total</dt>
+        <dd id="cartTotal" class="font-display text-[19px] font-semibold text-ink">TZS 0</dd>
+      </div>
+    </dl>
+
+    <div class="mt-5 grid gap-2.5">
+      <button id="checkoutBtn" class="w-full rounded-2xl bg-terra py-3.5 text-[14.5px] font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-terra-600 disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none disabled:hover:translate-y-0">
+        Proceed to Checkout
+      </button>
+      <button id="continueShoppingBtn" class="w-full rounded-2xl border border-ink/12 bg-white py-3.5 text-[14.5px] font-semibold text-ink transition hover:border-ink/25 hover:bg-cream-200">
+        Continue Shopping
+      </button>
+    </div>
+    <p class="mt-4 flex items-center justify-center gap-1.5 text-[11.5px] text-ink-500">
+      <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+      Secure checkout · Mobile Money & Cards accepted
+    </p>
+  </footer>
+</aside>
+
+<!-- ============ PRODUCT DETAIL MODAL ============ -->
+<div id="productOverlay" class="fixed inset-0 z-[70] hidden items-center justify-center p-0 sm:p-6">
+  <div class="absolute inset-0 bg-ink-900/65 backdrop-blur-sm" data-close-product></div>
+  <div id="productCard" class="relative z-10 max-h-full w-full max-w-5xl overflow-y-auto thin-scroll rounded-none bg-cream shadow-lift sm:rounded-4xl">
+    <button data-close-product aria-label="Close product details"
+      class="absolute right-4 top-4 z-20 grid h-10 w-10 place-items-center rounded-full border border-ink/10 bg-white/90 text-ink backdrop-blur transition hover:border-terra hover:text-terra-600">
+      <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <div id="productContent"></div>
+  </div>
+</div>
+
+<!-- ============ CHECKOUT OVERLAY ============ -->
+<div id="checkoutOverlay" class="fixed inset-0 z-[80] hidden items-start justify-center overflow-y-auto thin-scroll bg-ink-900/70 backdrop-blur-sm p-0 sm:p-6">
+  <div class="relative z-10 my-0 sm:my-4 w-full max-w-6xl rounded-none bg-cream shadow-lift sm:rounded-4xl">
+    <div id="checkoutContent"></div>
+  </div>
+</div>
+
+<!-- ============ TOAST ============ -->
+<div id="toast" class="pointer-events-none fixed bottom-6 left-1/2 z-[100] -translate-x-1/2 translate-y-24 opacity-0 transition-all duration-400 ease-[cubic-bezier(.22,.7,.25,1)]">
+  <div class="flex items-center gap-3 rounded-2xl bg-ink px-5 py-3.5 text-cream shadow-lift">
+    <span class="grid h-6 w-6 place-items-center rounded-full bg-terra">
+      <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7 9.5 17.5 4 12"/></svg>
+    </span>
+    <p id="toastText" class="text-[13.5px] font-medium">Added to cart</p>
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   WALK WITH REGI — Storefront logic
+   Structure:
+   1. Config & data
+   2. Utilities
+   3. Catalog rendering / filtering
+   4. Product detail
+   5. Cart
+   6. Checkout
+   7. Testimonials
+   8. Site interactions
+   ========================================================= */
+
+/* ---------- 1. CONFIG & DATA ---------- */
+
+// Rotating offers bar messages — edit freely to swap promotions.
+const OFFER_MESSAGES = [
+  '<span class="text-terra-300 font-semibold">★</span> 20% OFF new arrivals — use code <span class="font-bold text-white tracking-wider">WALKWITHREGI20</span>',
+  '<span class="text-terra-300 font-semibold">✦</span> Free delivery on all orders above <span class="font-bold text-white">TZS 250,000</span>',
+  '<span class="text-terra-300 font-semibold">✦</span> Buy 2 pairs, get a <span class="font-bold text-white">premium care kit free</span>',
+  '<span class="text-terra-300 font-semibold">✦</span> Same-day dispatch on orders placed before <span class="font-bold text-white">3:00 PM</span>',
+];
+
+const FREE_DELIVERY_THRESHOLD = 250000;
+const DELIVERY_FEE = 8000;
+
+const products = [
+  {
+    id: 'p1',
+    name: 'Regi Heritage Low',
+    category: 'Sneakers',
+    price: 189000,
+    oldPrice: 235000,
+    rating: 4.9,
+    reviews: 412,
+    badge: 'Best Seller',
+    short: 'Soft leather low-top with an all-day cushioned footbed.',
+    description: 'The Heritage Low is our signature silhouette — a clean, uncluttered low-top cut from soft full-grain leather and finished with a hand-stitched toe cap. The moulded memory-foam footbed and cork-blend midsole keep every step quiet and supported, whether you are walking the city or standing through a long day.',
+    materials: 'Full-grain leather upper · Cork-blend midsole · Natural rubber outsole · Cotton-canvas lining',
+    images: [
+      'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=900&q=80'
+    ],
+    sizes: ['39', '40', '41', '42', '43', '44', '45'],
+    colors: [
+      { name: 'Clay Red', hex: '#B4452E' },
+      { name: 'Sand', hex: '#D8C9B4' },
+      { name: 'Charcoal', hex: '#241E1A' }
+    ]
+  },
+  {
+    id: 'p2',
+    name: 'Tanzanite Runner Pro',
+    category: 'Running',
+    price: 245000,
+    oldPrice: 289000,
+    rating: 4.8,
+    reviews: 268,
+    badge: 'New',
+    short: 'Responsive foam runner built for long-distance comfort.',
+    description: 'Engineered for the long run. The Tanzanite Runner Pro pairs a lightweight engineered knit upper with a nitrogen-infused foam midsole that returns energy with every stride. A heel-lock cradle keeps the foot secure on uneven ground, and the anti-odour lining keeps things fresh after the kilometres add up.',
+    materials: 'Engineered knit upper · Nitrogen-infused foam midsole · Carbon-rubber outsole · Anti-odour lining',
+    images: [
+      'https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=900&q=80'
+    ],
+    sizes: ['40', '41', '42', '43', '44', '45', '46'],
+    colors: [
+      { name: 'Midnight', hex: '#1B1F2A' },
+      { name: 'Storm Grey', hex: '#8B8F96' },
+      { name: 'Terracotta', hex: '#C4603A' }
+    ]
+  },
+  {
+    id: 'p3',
+    name: 'Kilimanjaro Trail GTX',
+    category: 'Boots',
+    price: 312000,
+    oldPrice: null,
+    rating: 4.9,
+    reviews: 154,
+    badge: 'Waterproof',
+    short: 'Waterproof trail boot with aggressive grip for wet ground.',
+    description: 'Built for the mountain. A waterproof, breathable membrane keeps weather out while a deep-lug rubber outsole bites into mud, scree and wet rock. The padded collar and reinforced toe cap protect on rough terrain, and the gusseted tongue stops debris from sneaking in on long descents.',
+    materials: 'Waterproof membrane · Nubuck leather & mesh upper · Vibram-style lugged rubber outsole · EVA stability midsole',
+    images: [
+      'https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=900&q=80'
+    ],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    colors: [
+      { name: 'Bark Brown', hex: '#5A4433' },
+      { name: 'Slate', hex: '#4A5058' }
+    ]
+  },
+  {
+    id: 'p4',
+    name: 'Coastal Canvas Classic',
+    category: 'Casual',
+    price: 129000,
+    oldPrice: 159000,
+    rating: 4.6,
+    reviews: 331,
+    badge: 'Sale',
+    short: 'Breathable organic canvas, easy to slip on and go.',
+    description: 'A warm-weather staple. Heavyweight organic canvas is pre-washed for a broken-in feel from the first wear, while a vulcanised rubber cup sole keeps the ride soft and flat. Wear them barefoot to the beach or with socks into the office.',
+    materials: 'Organic cotton canvas upper · Vulcanised rubber cup sole · Recycled foam insole · Metal eyelets',
+    images: [
+      'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=900&q=80'
+    ],
+    sizes: ['38', '39', '40', '41', '42', '43', '44'],
+    colors: [
+      { name: 'Off White', hex: '#F0EBE2' },
+      { name: 'Navy', hex: '#22314F' },
+      { name: 'Olive', hex: '#5C6247' }
+    ]
+  },
+  {
+    id: 'p5',
+    name: 'Serengeti Slide',
+    category: 'Sandals',
+    price: 89000,
+    oldPrice: 109000,
+    rating: 4.7,
+    reviews: 502,
+    badge: null,
+    short: 'Contoured footbed slide that moulds to your arch.',
+    description: 'The slide you will live in all season. A contoured EVA footbed follows the natural arch of the foot, and the wide, soft-touch strap spreads pressure so nothing digs in. Lightweight, quick-drying and completely water-friendly.',
+    materials: 'Water-friendly EVA footbed · Soft-touch synthetic strap · Quick-dry lining',
+    images: [
+      'https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=900&q=80'
+    ],
+    sizes: ['38', '39', '40', '41', '42', '43', '44', '45'],
+    colors: [
+      { name: 'Black', hex: '#1A1A1A' },
+      { name: 'Terracotta', hex: '#C4603A' },
+      { name: 'Sky', hex: '#8FB4CE' }
+    ]
+  },
+  {
+    id: 'p6',
+    name: 'Dar Oxford Leather',
+    category: 'Formal',
+    price: 275000,
+    oldPrice: null,
+    rating: 4.8,
+    reviews: 189,
+    badge: 'Handmade',
+    short: 'Hand-finished leather oxford on a flexible stitched sole.',
+    description: 'A quiet, confident dress shoe. Full-grain calf leather is hand-burnished to a gentle patina, and a Blake-stitched construction keeps the sole slim and flexible from the very first wear. Pairs equally well with a suit or rolled chinos.',
+    materials: 'Full-grain calf leather upper · Blake-stitched leather sole · Leather-covered footbed · Hand-burnished finish',
+    images: [
+      'https://images.unsplash.com/photo-1614252369475-531eba835eb1?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=900&q=80'
+    ],
+    sizes: ['39', '40', '41', '42', '43', '44', '45'],
+    colors: [
+      { name: 'Deep Brown', hex: '#4A3326' },
+      { name: 'Black', hex: '#141414' }
+    ]
+  },
+  {
+    id: 'p7',
+    name: 'Zanzibar Breeze Knit',
+    category: 'Running',
+    price: 198000,
+    oldPrice: 219000,
+    rating: 4.7,
+    reviews: 224,
+    badge: null,
+    short: 'Feather-light knit trainer that breathes in the heat.',
+    description: 'Made for warm cities. An open-weave knit upper moves air across the foot, while a compression-moulded EVA midsole absorbs impact without adding bulk. At just 218 grams in a size 42, it disappears on foot.',
+    materials: 'Open-weave knit upper · Compression-moulded EVA midsole · Breathable mesh footbed · Rubber heel pod',
+    images: [
+      'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80'
+    ],
+    sizes: ['39', '40', '41', '42', '43', '44', '45'],
+    colors: [
+      { name: 'Cloud', hex: '#EDE9E3' },
+      { name: 'Coral', hex: '#E07A5F' },
+      { name: 'Graphite', hex: '#3B3B3B' }
+    ]
+  },
+  {
+    id: 'p8',
+    name: 'Stone Town Chukka',
+    category: 'Boots',
+    price: 232000,
+    oldPrice: 262000,
+    rating: 4.8,
+    reviews: 143,
+    badge: 'Sale',
+    short: 'Suede chukka that dresses up or down effortlessly.',
+    description: 'A three-eyelet chukka cut from velvety suede over a lightweight, flexible sole. Unlined for breathability, it works with tailored trousers or rolled jeans — the sort of shoe that quietly becomes your default.',
+    materials: 'Premium suede upper · Unlined construction · Flexible rubber-crepe sole · Leather heel counter',
+    images: [
+      'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1614252369475-531eba835eb1?auto=format&fit=crop&w=900&q=80'
+    ],
+    sizes: ['39', '40', '41', '42', '43', '44', '45'],
+    colors: [
+      { name: 'Taupe', hex: '#A4927C' },
+      { name: 'Deep Navy', hex: '#25324A' },
+      { name: 'Chocolate', hex: '#4B3324' }
+    ]
+  }
+];
+
+const testimonials = [
+  {
+    quote: 'The Heritage Low is the first sneaker I have owned that felt broken-in from day one. I wear them to the office, to church, everywhere. Three months in and they still look like new.',
+    name: 'Amina Hassan',
+    role: 'Architect · Dar es Salaam',
+    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80',
+    rating: 5
+  },
+  {
+    quote: 'Delivery to Arusha took two days and the packaging genuinely felt like a gift. I had a sizing question on WhatsApp and got a real answer in about four minutes. That is rare here.',
+    name: 'Joshua Mwakyusa',
+    role: 'Tour Operator · Arusha',
+    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
+    rating: 5
+  },
+  {
+    quote: 'I hiked Kilimanjaro in the Trail GTX and my feet were the only dry part of me. Zero blisters over five days. I have already ordered a second pair for my brother.',
+    name: 'Neema Kileo',
+    role: 'Physiotherapist · Moshi',
+    avatar: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=80',
+    rating: 5
+  }
+];
+
+/* ---------- 2. UTILITIES ---------- */
+
+const $  = (sel, ctx = document) => ctx.querySelector(sel);
+const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
+
+const fmtTZS = (n) => 'TZS ' + new Intl.NumberFormat('en-US').format(Math.round(n));
+const money = (n) => new Intl.NumberFormat('en-US').format(Math.round(n));
+
+function starMarkup(rating, size = 'w-3.5 h-3.5') {
+  let out = '<span class="star-track">';
+  for (let i = 1; i <= 5; i++) {
+    const cls = i <= Math.round(rating) ? 'text-terra' : 'text-ink/15';
+    out += `<svg class="${size} ${cls}" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.6 1.1 6.5L12 17.3 6.2 20.35l1.1-6.5-4.7-4.6 6.5-.95z"/></svg>`;
+  }
+  return out + '</span>';
+}
+
+let toastTimer;
+function toast(message) {
+  const el = $('#toast');
+  $('#toastText').textContent = message;
+  el.classList.remove('translate-y-24', 'opacity-0');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.add('translate-y-24', 'opacity-0'), 2600);
+}
+
+/* ---------- 3. CATALOG ---------- */
+
+const state = { category: 'All', sort: 'featured', query: '' };
+
+function getVisibleProducts() {
+  let list = products.slice();
+  if (state.category !== 'All') list = list.filter(p => p.category === state.category);
+  if (state.query.trim()) {
+    const q = state.query.trim().toLowerCase();
+    list = list.filter(p =>
+      p.name.toLowerCase().includes(q) ||
+      p.category.toLowerCase().includes(q) ||
+      p.short.toLowerCase().includes(q)
+    );
+  }
+  if (state.sort === 'price-asc')  list.sort((a, b) => a.price - b.price);
+  if (state.sort === 'price-desc') list.sort((a, b) => b.price - a.price);
+  if (state.sort === 'rating')     list.sort((a, b) => b.rating - a.rating);
+  return list;
+}
+
+function renderCategoryChips() {
+  const categories = ['All', ...new Set(products.map(p => p.category))];
+  $('#categoryChips').innerHTML = categories.map(cat => {
+    const active = state.category === cat;
+    return `<button type="button" data-category="${cat}"
+      class="rounded-full border px-4 py-2 text-[13px] font-medium transition duration-300 ${
+        active
+          ? 'border-ink bg-ink text-cream shadow-soft'
+          : 'border-ink/12 bg-white text-ink-600 hover:border-terra/50 hover:text-terra-600'
+      }">${cat}</button>`;
+  }).join('');
+}
+
+function renderCatalog() {
+  const list = getVisibleProducts();
+  const grid = $('#productGrid');
+  $('#resultCount').textContent = list.length;
+
+  const hasFilters = state.category !== 'All' || state.query.trim() !== '' || state.sort !== 'featured';
+  $('#clearFilters').classList.toggle('hidden', !hasFilters);
+
+  grid.innerHTML = list.map((p, i) => {
+    const discount = p.oldPrice ? Math.round((1 - p.price / p.oldPrice) * 100) : 0;
+    return `
+    <article class="group reveal relative flex flex-col overflow-hidden rounded-3xl border border-ink/6 bg-white shadow-soft transition-all duration-500 hover:-translate-y-1.5 hover:shadow-lift"
+             style="transition-delay:${Math.min(i * 55, 320)}ms">
+      <div class="relative aspect-[4/5] overflow-hidden bg-cream-200">
+        <img src="${p.images[0]}" alt="${p.name}" loading="lazy"
+             class="h-full w-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(.22,.7,.25,1)] group-hover:scale-[1.07]" />
+
+        <div class="absolute left-3 top-3 flex flex-col items-start gap-1.5">
+          ${p.badge ? `<span class="rounded-full bg-ink/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-cream backdrop-blur">${p.badge}</span>` : ''}
+          ${discount > 0 ? `<span class="rounded-full bg-terra px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-white">−${discount}%</span>` : ''}
+        </div>
+
+        <button type="button" data-quick-add="${p.id}" aria-label="Quick add ${p.name} to cart"
+          class="absolute bottom-3 right-3 grid h-10 w-10 translate-y-3 place-items-center rounded-full bg-white/95 text-ink opacity-0 shadow-lg backdrop-blur transition-all duration-400 hover:bg-terra hover:text-white group-hover:translate-y-0 group-hover:opacity-100">
+          <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+      </div>
+
+      <div class="flex flex-1 flex-col p-4 sm:p-5">
+        <div class="flex items-center justify-between gap-2">
+          <span class="text-[10.5px] font-semibold uppercase tracking-[0.16em] text-terra-600">${p.category}</span>
+          <span class="flex items-center gap-1.5 text-[11.5px] text-ink-500">${starMarkup(p.rating)}<span>${p.rating}</span></span>
+        </div>
+
+        <h3 class="mt-2.5 font-display text-[17.5px] font-semibold leading-snug text-ink">${p.name}</h3>
+        <p class="mt-1.5 line-clamp-2 text-[13px] leading-relaxed text-ink-500">${p.short}</p>
+
+        <div class="mt-auto pt-4">
+          <div class="flex items-end justify-between gap-3">
+            <div>
+              <p class="font-display text-[18px] font-semibold text-ink">${fmtTZS(p.price)}</p>
+              ${p.oldPrice ? `<p class="text-[12.5px] text-ink/40 line-through">${fmtTZS(p.oldPrice)}</p>` : ''}
+            </div>
+            <button type="button" data-open-product="${p.id}"
+              class="rounded-full border border-ink/12 px-4 py-2 text-[12.5px] font-semibold text-ink transition hover:border-terra hover:bg-terra hover:text-white">
+              View
+            </button>
+          </div>
+        </div>
+      </div>
+    </article>`;
+  }).join('');
+
+  $('#emptyState').classList.toggle('hidden', list.length !== 0);
+  observeReveals(grid);
+}
+
+/* ---------- 4. PRODUCT DETAIL ---------- */
+
+let currentProduct = null;
+let selectedSize = null;
+let selectedColor = null;
+let detailQty = 1;
+let galleryIndex = 0;
+
+function openProduct(id) {
+  const p = products.find(x => x.id === id);
+  if (!p) return;
+  currentProduct = p;
+  selectedSize = p.sizes[Math.min(2, p.sizes.length - 1)];
+  selectedColor = p.colors[0].name;
+  detailQty = 1;
+  galleryIndex = 0;
+  renderProductDetail();
+  const overlay = $('#productOverlay');
+  overlay.classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeProduct() {
+  $('#productOverlay').classList.add('hidden');
+  syncScrollLock();
+}
+
+function renderProductDetail() {
+  const p = currentProduct;
+  const discount = p.oldPrice ? Math.round((1 - p.price / p.oldPrice) * 100) : 0;
+
+  $('#productContent').innerHTML = `
+    <div class="grid md:grid-cols-2">
+      <!-- Gallery -->
+      <div class="bg-cream-200 p-4 sm:p-6">
+        <div class="overflow-hidden rounded-3xl bg-white">
+          <img id="detailMainImage" src="${p.images[galleryIndex]}" alt="${p.name}"
+               class="aspect-square w-full object-cover" />
+        </div>
+        <div class="mt-3 grid grid-cols-4 gap-3">
+          ${p.images.map((img, i) => `
+            <button type="button" data-thumb="${i}"
+              class="thumb overflow-hidden rounded-2xl border-2 ${i === galleryIndex ? 'border-terra' : 'border-transparent'} bg-white transition">
+              <img src="${img}" alt="${p.name} view ${i + 1}" class="aspect-square w-full object-cover" />
+            </button>`).join('')}
+        </div>
+      </div>
+
+      <!-- Info -->
+      <div class="p-6 sm:p-9">
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="rounded-full bg-terra-50 px-2.5 py-1 text-[10.5px] font-bold uppercase tracking-[0.14em] text-terra-600">${p.category}</span>
+          ${p.badge ? `<span class="rounded-full bg-ink/8 px-2.5 py-1 text-[10.5px] font-bold uppercase tracking-[0.14em] text-ink-700">${p.badge}</span>` : ''}
+        </div>
+
+        <h2 class="mt-4 font-display text-[28px] sm:text-[34px] font-semibold leading-tight tracking-[-0.02em] text-ink">${p.name}</h2>
+
+        <div class="mt-3 flex items-center gap-3">
+          ${starMarkup(p.rating, 'w-4 h-4')}
+          <span class="text-[13px] text-ink-500">${p.rating} · ${p.reviews} reviews</span>
+        </div>
+
+        <div class="mt-5 flex flex-wrap items-end gap-3">
+          <p class="font-display text-[30px] font-semibold leading-none text-ink">${fmtTZS(p.price)}</p>
+          ${p.oldPrice ? `
+            <p class="text-[15px] text-ink/40 line-through">${fmtTZS(p.oldPrice)}</p>
+            <span class="rounded-full bg-terra px-2.5 py-1 text-[11px] font-bold text-white">Save ${discount}%</span>` : ''}
+        </div>
+
+        <p class="mt-6 text-[14.5px] leading-relaxed text-ink-600">${p.description}</p>
+
+        <div class="mt-6 rounded-2xl border border-ink/8 bg-cream-100 p-4">
+          <p class="text-[11px] font-bold uppercase tracking-[0.16em] text-ink-500">Materials & construction</p>
+          <p class="mt-2 text-[13.5px] leading-relaxed text-ink-700">${p.materials}</p>
+        </div>
+
+        <!-- Sizes -->
+        <div class="mt-7">
+          <div class="flex items-center justify-between">
+            <p class="text-[12px] font-bold uppercase tracking-[0.16em] text-ink-500">Select size (EU)</p>
+            <button type="button" class="text-[12px] font-medium text-terra-600 underline decoration-terra/30 underline-offset-4">Size guide</button>
+          </div>
+          <div class="mt-3 flex flex-wrap gap-2">
+            ${p.sizes.map(s => `
+              <button type="button" data-size="${s}"
+                class="size-btn min-w-[46px] rounded-xl border px-3 py-2.5 text-[13.5px] font-semibold ${
+                  s === selectedSize ? 'active border-terra bg-terra text-white' : 'border-ink/12 bg-white text-ink hover:border-ink/30'
+                }">${s}</button>`).join('')}
+          </div>
+        </div>
+
+        <!-- Colors -->
+        <div class="mt-6">
+          <p class="text-[12px] font-bold uppercase tracking-[0.16em] text-ink-500">Colour — <span class="font-medium normal-case tracking-normal text-ink">${selectedColor}</span></p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            ${p.colors.map(c => `
+              <button type="button" data-color="${c.name}"
+                class="color-btn flex items-center gap-2 rounded-xl border px-3 py-2 text-[13px] font-medium ${
+                  c.name === selectedColor ? 'active border-terra bg-terra text-white' : 'border-ink/12 bg-white text-ink-700 hover:border-ink/30'
+                }">
+                <span class="h-4 w-4 rounded-full ring-1 ring-inset ring-black/10" style="background:${c.hex}"></span>
+                <span class="swatch-label">${c.name}</span>
+              </button>`).join('')}
+          </div>
+        </div>
+
+        <!-- Quantity + actions -->
+        <div class="mt-7 flex flex-wrap items-center gap-4">
+          <div class="flex items-center rounded-2xl border border-ink/12 bg-white">
+            <button type="button" data-qty="-1" aria-label="Decrease quantity" class="grid h-12 w-12 place-items-center rounded-l-2xl text-ink transition hover:bg-cream-200">
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14"/></svg>
+            </button>
+            <span id="detailQty" class="w-10 text-center font-display text-[16px] font-semibold text-ink">${detailQty}</span>
+            <button type="button" data-qty="1" aria-label="Increase quantity" class="grid h-12 w-12 place-items-center rounded-r-2xl text-ink transition hover:bg-cream-200">
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+          </div>
+          <p class="text-[12.5px] text-ink-500">
+            <span class="inline-block h-2 w-2 rounded-full bg-emerald-500"></span>
+            In stock — ships today
+          </p>
+        </div>
+
+        <div class="mt-6 grid gap-3 sm:grid-cols-2">
+          <button type="button" data-add-to-cart
+            class="flex items-center justify-center gap-2 rounded-2xl bg-ink py-4 text-[14.5px] font-semibold text-cream transition hover:-translate-y-0.5 hover:bg-ink-800">
+            <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 4h2l1.6 10.4a2 2 0 0 0 2 1.7h7.7a2 2 0 0 0 2-1.6L20 7H6"/><circle cx="9.5" cy="19.5" r="1.4"/><circle cx="17" cy="19.5" r="1.4"/>
+            </svg>
+            Add to Cart
+          </button>
+          <button type="button" data-buy-now
+            class="flex items-center justify-center gap-2 rounded-2xl bg-terra py-4 text-[14.5px] font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-terra-600">
+            Buy Now
+            <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </button>
+        </div>
+
+        <ul class="mt-6 grid gap-2.5 text-[12.5px] text-ink-500">
+          <li class="flex items-center gap-2"><svg viewBox="0 0 24 24" class="h-4 w-4 text-terra" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 7h13v8H3zM16 10h3l2 3v2h-5z"/><circle cx="7" cy="17" r="1.5"/><circle cx="18" cy="17" r="1.5"/></svg> Free delivery on orders above ${fmtTZS(FREE_DELIVERY_THRESHOLD)}</li>
+          <li class="flex items-center gap-2"><svg viewBox="0 0 24 24" class="h-4 w-4 text-terra" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg> 30-day returns, free of charge</li>
+        </ul>
+      </div>
+    </div>`;
+}
+
+/* ---------- 5. CART ---------- */
+
+let cart = [];
+
+const cartDrawer = $('#cartDrawer');
+const cartBackdrop = $('#cartBackdrop');
+
+function cartCount() { return cart.reduce((s, i) => s + i.qty, 0); }
+function cartSubtotal() {
+  return cart.reduce((sum, item) => {
+    const p = products.find(x => x.id === item.id);
+    return sum + (p ? p.price * item.qty : 0);
+  }, 0);
+}
+function deliveryFeeFor(subtotal) {
+  if (subtotal === 0) return 0;
+  return subtotal >= FREE_DELIVERY_THRESHOLD ? 0 : DELIVERY_FEE;
+}
+
+function addToCart(productId, size, color, qty = 1) {
+  const key = `${productId}|${size}|${color}`;
+  const existing = cart.find(i => i.key === key);
+  if (existing) existing.qty += qty;
+  else cart.push({ key, id: productId, size, color, qty });
+  renderCart();
+  updateBadge();
+}
+
+function updateBadge() {
+  const badge = $('#cartBadge');
+  const count = cartCount();
+  badge.textContent = count;
+  badge.classList.toggle('scale-0', count === 0);
+  badge.classList.toggle('scale-100', count > 0);
+}
+
+function renderCart() {
+  const wrap = $('#cartItems');
+  const subtotal = cartSubtotal();
+  const delivery = deliveryFeeFor(subtotal);
+  const count = cartCount();
+
+  $('#cartItemCountLabel').textContent = `${count} item${count === 1 ? '' : 's'}`;
+
+  // Free-delivery progress
+  const remaining = Math.max(0, FREE_DELIVERY_THRESHOLD - subtotal);
+  const pct = Math.min(100, (subtotal / FREE_DELIVERY_THRESHOLD) * 100);
+  $('#shippingProgressBar').style.width = pct + '%';
+  $('#shippingProgressText').innerHTML = subtotal === 0
+    ? `Add ${fmtTZS(FREE_DELIVERY_THRESHOLD)} more to unlock <span class="font-semibold text-ink">free delivery</span>`
+    : remaining > 0
+      ? `You're ${fmtTZS(remaining)} away from <span class="font-semibold text-ink">free delivery</span>`
+      : `<span class="font-semibold text-terra-600">🎉 Free delivery unlocked</span>`;
+
+  if (cart.length === 0) {
+    wrap.innerHTML = `
+      <div class="flex h-full flex-col items-center justify-center py-16 text-center">
+        <span class="grid h-20 w-20 place-items-center rounded-full bg-cream-200 text-ink/35">
+          <svg viewBox="0 0 24 24" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 4h2l1.6 10.4a2 2 0 0 0 2 1.7h7.7a2 2 0 0 0 2-1.6L20 7H6"/><circle cx="9.5" cy="19.5" r="1.4"/><circle cx="17" cy="19.5" r="1.4"/>
+          </svg>
+        </span>
+        <p class="mt-6 font-display text-[19px] font-semibold text-ink">Your cart is empty</p>
+        <p class="mt-2 max-w-[260px] text-[13.5px] leading-relaxed text-ink-500">Nothing here yet. Have a look at the collection and find your next favourite pair.</p>
+        <button type="button" data-continue class="mt-7 rounded-2xl bg-terra px-6 py-3 text-[13.5px] font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-terra-600">
+          Start shopping
+        </button>
+      </div>`;
+  } else {
+    wrap.innerHTML = cart.map(item => {
+      const p = products.find(x => x.id === item.id);
+      if (!p) return '';
+      return `
+      <div class="anim-in mb-4 flex gap-4 rounded-3xl border border-ink/6 bg-white p-3.5 shadow-soft">
+        <img src="${p.images[0]}" alt="${p.name}" class="h-[92px] w-[80px] shrink-0 rounded-2xl object-cover" />
+        <div class="min-w-0 flex-1">
+          <div class="flex items-start justify-between gap-2">
+            <div class="min-w-0">
+              <h3 class="truncate font-display text-[15.5px] font-semibold text-ink">${p.name}</h3>
+              <p class="mt-0.5 text-[12px] text-ink-500">Size ${item.size} · ${item.color}</p>
+            </div>
+            <button type="button" data-remove="${item.key}" aria-label="Remove ${p.name}"
+              class="grid h-7 w-7 shrink-0 place-items-center rounded-full text-ink/35 transition hover:bg-terra-50 hover:text-terra-600">
+              <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+
+          <div class="mt-3 flex items-center justify-between gap-2">
+            <div class="flex items-center rounded-xl border border-ink/12 bg-cream-100">
+              <button type="button" data-inc="${item.key}" aria-label="Increase quantity" class="grid h-8 w-8 place-items-center rounded-l-xl text-ink transition hover:bg-cream-300">
+                <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <span class="w-8 text-center text-[13px] font-semibold text-ink">${item.qty}</span>
+              <button type="button" data-dec="${item.key}" aria-label="Decrease quantity" class="grid h-8 w-8 place-items-center rounded-r-xl text-ink transition hover:bg-cream-300">
+                <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"/></svg>
+              </button>
+            </div>
+            <p class="font-display text-[15px] font-semibold text-ink">${fmtTZS(p.price * item.qty)}</p>
+          </div>
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  $('#cartSubtotal').textContent = fmtTZS(subtotal);
+  $('#cartDelivery').innerHTML = delivery === 0
+    ? (subtotal > 0 ? '<span class="text-terra-600 font-semibold">FREE</span>' : fmtTZS(0))
+    : fmtTZS(delivery);
+  $('#cartTotal').textContent = fmtTZS(subtotal + delivery);
+  $('#checkoutBtn').disabled = cart.length === 0;
+}
+
+function openCart() {
+  renderCart();
+  cartBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+  cartDrawer.classList.remove('translate-x-full');
+  document.body.style.overflow = 'hidden';
+}
+function closeCart() {
+  cartBackdrop.classList.add('opacity-0', 'pointer-events-none');
+  cartDrawer.classList.add('translate-x-full');
+  syncScrollLock();
+}
+function syncScrollLock() {
+  const anyOpen = !$('#cartDrawer').classList.contains('translate-x-full')
+    || !$('#productOverlay').classList.contains('hidden')
+    || !$('#checkoutOverlay').classList.contains('hidden');
+  document.body.style.overflow = anyOpen ? 'hidden' : '';
+}
+
+/* ---------- 6. CHECKOUT ---------- */
+
+let selectedPayment = 'momo';
+
+function openCheckout() {
+  if (cart.length === 0) { toast('Your cart is empty'); return; }
+  closeCart();
+  renderCheckout();
+  $('#checkoutOverlay').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+function closeCheckout() {
+  $('#checkoutOverlay').classList.add('hidden');
+  syncScrollLock();
+}
+
+function orderSummaryMarkup() {
+  const subtotal = cartSubtotal();
+  const delivery = deliveryFeeFor(subtotal);
+  const total = subtotal + delivery;
+  return `
+    <div class="space-y-3.5">
+      ${cart.map(item => {
+        const p = products.find(x => x.id === item.id);
+        return `
+        <div class="flex items-center gap-3">
+          <div class="relative">
+            <img src="${p.images[0]}" alt="${p.name}" class="h-14 w-14 rounded-2xl object-cover" />
+            <span class="absolute -right-1.5 -top-1.5 grid h-5 w-5 place-items-center rounded-full bg-ink text-[10px] font-bold text-cream">${item.qty}</span>
+          </div>
+          <div class="min-w-0 flex-1">
+            <p class="truncate text-[13.5px] font-semibold text-ink">${p.name}</p>
+            <p class="text-[12px] text-ink-500">Size ${item.size} · ${item.color}</p>
+          </div>
+          <p class="text-[13.5px] font-semibold text-ink">${fmtTZS(p.price * item.qty)}</p>
+        </div>`;
+      }).join('')}
+    </div>
+    <dl class="mt-6 space-y-2.5 border-t border-ink/8 pt-5 text-[13.5px]">
+      <div class="flex justify-between"><dt class="text-ink-600">Subtotal</dt><dd class="font-medium text-ink">${fmtTZS(subtotal)}</dd></div>
+      <div class="flex justify-between"><dt class="text-ink-600">Delivery</dt><dd class="font-medium text-ink">${delivery === 0 ? '<span class="text-terra-600 font-semibold">FREE</span>' : fmtTZS(delivery)}</dd></div>
+      <div class="flex justify-between"><dt class="text-ink-600">VAT (included)</dt><dd class="font-medium text-ink">—</dd></div>
+      <div class="flex items-center justify-between border-t border-ink/8 pt-3.5">
+        <dt class="font-display text-[16.5px] font-semibold text-ink">Total</dt>
+        <dd class="font-display text-[21px] font-semibold text-ink">${fmtTZS(total)}</dd>
+      </div>
+    </dl>`;
+}
+
+function renderCheckout() {
+  $('#checkoutContent').innerHTML = `
+    <div class="flex items-center justify-between border-b border-ink/8 px-5 py-5 sm:px-8">
+      <div>
+        <h2 class="font-display text-[22px] sm:text-[26px] font-semibold text-ink">Checkout</h2>
+        <p class="mt-0.5 text-[12.5px] text-ink-500">Complete your details and choose how you'd like to pay.</p>
+      </div>
+      <button type="button" data-close-checkout aria-label="Close checkout"
+        class="grid h-10 w-10 place-items-center rounded-full border border-ink/10 bg-white text-ink transition hover:border-terra hover:text-terra-600">
+        <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+
+    <form id="checkoutForm" class="grid gap-10 px-5 py-7 sm:px-8 sm:py-9 lg:grid-cols-12">
+      <!-- Left: details -->
+      <div class="lg:col-span-7">
+        <section>
+          <h3 class="flex items-center gap-2.5 font-display text-[18px] font-semibold text-ink">
+            <span class="grid h-7 w-7 place-items-center rounded-full bg-terra text-[12px] font-bold text-white">1</span>
+            Delivery details
+          </h3>
+          <div class="mt-5 grid gap-4 sm:grid-cols-2">
+            <div class="sm:col-span-2">
+              <label for="ckName" class="mb-1.5 block text-[12.5px] font-semibold text-ink-700">Full name *</label>
+              <input id="ckName" name="name" required class="field" placeholder="e.g. Amina Hassan" autocomplete="name" />
+            </div>
+            <div>
+              <label for="ckPhone" class="mb-1.5 block text-[12.5px] font-semibold text-ink-700">Phone number *</label>
+              <input id="ckPhone" name="phone" required type="tel" class="field" placeholder="+255 7XX XXX XXX" autocomplete="tel" />
+            </div>
+            <div>
+              <label for="ckEmail" class="mb-1.5 block text-[12.5px] font-semibold text-ink-700">Email address *</label>
+              <input id="ckEmail" name="email" required type="email" class="field" placeholder="you@example.com" autocomplete="email" />
+            </div>
+            <div class="sm:col-span-2">
+              <label for="ckAddress" class="mb-1.5 block text-[12.5px] font-semibold text-ink-700">Delivery address *</label>
+              <input id="ckAddress" name="address" required class="field" placeholder="Street, building, apartment" autocomplete="street-address" />
+            </div>
+            <div>
+              <label for="ckCity" class="mb-1.5 block text-[12.5px] font-semibold text-ink-700">City / Region *</label>
+              <input id="ckCity" name="city" required class="field" placeholder="Dar es Salaam" autocomplete="address-level2" />
+            </div>
+            <div>
+              <label for="ckNotes" class="mb-1.5 block text-[12.5px] font-semibold text-ink-700">Delivery notes</label>
+              <input id="ckNotes" name="notes" class="field" placeholder="Optional — landmark, timing…" />
+            </div>
+          </div>
+        </section>
+
+        <section class="mt-9 border-t border-ink/8 pt-8">
+          <h3 class="flex items-center gap-2.5 font-display text-[18px] font-semibold text-ink">
+            <span class="grid h-7 w-7 place-items-center rounded-full bg-terra text-[12px] font-bold text-white">2</span>
+            Payment method
+          </h3>
+
+          <div class="mt-5 grid gap-3 sm:grid-cols-2">
+            ${paymentOption('momo', 'M-Pesa', 'Vodacom mobile money', '#E60000')}
+            ${paymentOption('tigo', 'Mixx by Yas', 'Tigo Pesa mobile money', '#0B4EA2')}
+            ${paymentOption('airtel', 'Airtel Money', 'Airtel mobile wallet', '#ED1C24')}
+            ${paymentOption('halo', 'HaloPesa', 'Halotel mobile money', '#F5A623')}
+            ${paymentOption('card', 'Credit / Debit Card', 'Visa, Mastercard, Amex', '#1A1F71')}
+            ${paymentOption('cash', 'Cash on Delivery', 'Pay the rider on arrival', '#C4603A')}
+          </div>
+
+          <!-- Conditional: mobile money -->
+          <div id="momoFields" class="mt-6 rounded-3xl border border-ink/8 bg-cream-100 p-5">
+            <p class="text-[12px] font-bold uppercase tracking-[0.16em] text-ink-500">Mobile money details</p>
+            <div class="mt-4 grid gap-4 sm:grid-cols-2">
+              <div>
+                <label for="momoNumber" class="mb-1.5 block text-[12.5px] font-semibold text-ink-700">Wallet phone number *</label>
+                <input id="momoNumber" class="field" placeholder="+255 7XX XXX XXX" inputmode="tel" />
+              </div>
+              <div>
+                <label for="momoName" class="mb-1.5 block text-[12.5px] font-semibold text-ink-700">Registered wallet name</label>
+                <input id="momoName" class="field" placeholder="Usually the account holder" />
+              </div>
+            </div>
+            <p class="mt-4 flex items-start gap-2 text-[12.5px] leading-relaxed text-ink-500">
+              <svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-terra" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+              You'll receive a push prompt on your phone. Approve it with your PIN to complete the order.
+            </p>
+          </div>
+
+          <!-- Conditional: card -->
+          <div id="cardFields" class="mt-6 hidden rounded-3xl border border-ink/8 bg-cream-100 p-5">
+            <p class="text-[12px] font-bold uppercase tracking-[0.16em] text-ink-500">Card details</p>
+            <div class="mt-4 grid gap-4 sm:grid-cols-2">
+              <div class="sm:col-span-2">
+                <label for="cardNumber" class="mb-1.5 block text-[12.5px] font-semibold text-ink-700">Card number *</label>
+                <input id="cardNumber" class="field" placeholder="0000 0000 0000 0000" inputmode="numeric" />
+              </div>
+              <div class="sm:col-span-2">
+                <label for="cardName" class="mb-1.5 block text-[12.5px] font-semibold text-ink-700">Name on card *</label>
+                <input id="cardName" class="field" placeholder="As printed on the card" />
+              </div>
+              <div class="grid grid-cols-2 gap-4 sm:col-span-2">
+                <div>
+                  <label for="cardExp" class="mb-1.5 block text-[12.5px] font-semibold text-ink-700">Expiry *</label>
+                  <input id="cardExp" class="field" placeholder="MM / YY" inputmode="numeric" />
+                </div>
+                <div>
+                  <label for="cardCvv" class="mb-1.5 block text-[12.5px] font-semibold text-ink-700">CVV *</label>
+                  <input id="cardCvv" class="field" placeholder="•••" inputmode="numeric" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Conditional: cash -->
+          <div id="cashFields" class="mt-6 hidden rounded-3xl border border-ink/8 bg-cream-100 p-5">
+            <p class="text-[12.5px] leading-relaxed text-ink-600">
+              Please prepare <span class="font-semibold text-ink" id="cashAmount">TZS 0</span> in cash. Our rider will call you on the number provided before arriving.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <!-- Right: summary -->
+      <aside class="lg:col-span-5">
+        <div class="lg:sticky lg:top-6 rounded-3xl border border-ink/8 bg-white p-6 shadow-soft">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display text-[18px] font-semibold text-ink">Order summary</h3>
+            <span class="rounded-full bg-cream-200 px-2.5 py-1 text-[11px] font-semibold text-ink-600">${cartCount()} item${cartCount() === 1 ? '' : 's'}</span>
+          </div>
+          <div class="mt-5">${orderSummaryMarkup()}</div>
+
+          <label class="mt-6 flex cursor-pointer items-start gap-3 rounded-2xl bg-cream-100 p-3.5">
+            <input type="checkbox" id="ckTerms" required class="mt-0.5 h-4 w-4 accent-[#C4603A]" />
+            <span class="text-[12.5px] leading-relaxed text-ink-600">I agree to the <button type="button" class="font-semibold text-terra-600 underline decoration-terra/30 underline-offset-2">terms of sale</button> and <button type="button" class="font-semibold text-terra-600 underline decoration-terra/30 underline-offset-2">returns policy</button>.</span>
+          </label>
+
+          <button type="submit" id="placeOrderBtn"
+            class="mt-5 w-full rounded-2xl bg-terra py-4 text-[15px] font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-terra-600">
+            Place Order · ${fmtTZS(cartSubtotal() + deliveryFeeFor(cartSubtotal()))}
+          </button>
+
+          <div class="mt-4 flex items-center justify-center gap-2 text-[11.5px] text-ink-500">
+            <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            Encrypted & secure. We never store card details.
+          </div>
+        </div>
+      </aside>
+    </form>`;
+  updatePaymentFields();
+}
+
+function paymentOption(id, title, sub, color) {
+  return `
+    <label class="pay-card">
+      <input type="radio" name="payment" value="${id}" ${id === 'momo' ? 'checked' : ''} data-payment />
+      <span class="pay-body">
+        <span class="grid h-9 w-9 shrink-0 place-items-center rounded-xl text-[10px] font-bold text-white" style="background:${color}">
+          ${title.split(' ')[0].slice(0, 3).toUpperCase()}
+        </span>
+        <span class="min-w-0">
+          <span class="block text-[13.5px] font-semibold text-ink">${title}</span>
+          <span class="block text-[11.5px] text-ink-500">${sub}</span>
+        </span>
+      </span>
+    </label>`;
+}
+
+function updatePaymentFields() {
+  const momo = $('#momoFields'), card = $('#cardFields'), cash = $('#cashFields');
+  if (!momo) return;
+  momo.classList.toggle('hidden', !['momo', 'tigo', 'airtel', 'halo'].includes(selectedPayment));
+  card.classList.toggle('hidden', selectedPayment !== 'card');
+  cash.classList.toggle('hidden', selectedPayment !== 'cash');
+  const cashEl = $('#cashAmount');
+  if (cashEl) cashEl.textContent = fmtTZS(cartSubtotal() + deliveryFeeFor(cartSubtotal()));
+}
+
+function generateReference() {
+  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  let rand = '';
+  for (let i = 0; i < 5; i++) rand += chars[Math.floor(Math.random() * chars.length)];
+  return `WWR-${new Date().getFullYear()}-${rand}`;
+}
+
+function renderConfirmation(order) {
+  $('#checkoutContent').innerHTML = `
+    <div class="px-6 py-14 text-center sm:px-10 sm:py-20">
+      <div class="mx-auto grid h-20 w-20 place-items-center rounded-full bg-terra-50">
+        <span class="relative grid h-14 w-14 place-items-center rounded-full bg-terra text-white pulse-ring">
+          <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7 9.5 17.5 4 12"/></svg>
+        </span>
+      </div>
+
+      <h2 class="mt-8 font-display text-[30px] sm:text-[38px] font-semibold tracking-[-0.02em] text-ink">Order confirmed 🎉</h2>
+      <p class="mx-auto mt-4 max-w-lg text-[15px] leading-relaxed text-ink-600">
+        Thank you, <span class="font-semibold text-ink">${order.name}</span>. We've received your order and sent a confirmation to
+        <span class="font-medium text-ink">${order.email}</span>. Our team will call you shortly to confirm delivery.
+      </p>
+
+      <div class="mx-auto mt-9 max-w-md rounded-3xl border border-dashed border-terra/40 bg-terra-50 p-6">
+        <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-terra-600">Order reference</p>
+        <p class="mt-2 font-mono text-[26px] font-bold tracking-[0.08em] text-ink">${order.ref}</p>
+      </div>
+
+      <div class="mx-auto mt-9 max-w-lg rounded-3xl border border-ink/8 bg-white p-6 text-left shadow-soft">
+        <h3 class="font-display text-[17px] font-semibold text-ink">Summary</h3>
+        <div class="mt-4">${order.summary}</div>
+        <dl class="mt-5 grid gap-2.5 border-t border-ink/8 pt-5 text-[13.5px]">
+          <div class="flex justify-between"><dt class="text-ink-600">Payment method</dt><dd class="font-medium text-ink">${order.payment}</dd></div>
+          <div class="flex justify-between"><dt class="text-ink-600">Delivering to</dt><dd class="max-w-[60%] text-right font-medium text-ink">${order.address}</dd></div>
+          <div class="flex justify-between"><dt class="text-ink-600">Estimated arrival</dt><dd class="font-medium text-ink">${order.eta}</dd></div>
+        </dl>
+      </div>
+
+      <div class="mt-9 flex flex-wrap items-center justify-center gap-3">
+        <button type="button" data-close-checkout class="rounded-2xl bg-ink px-7 py-3.5 text-[14.5px] font-semibold text-cream transition hover:-translate-y-0.5 hover:bg-ink-800">
+          Continue Shopping
+        </button>
+        <button type="button" data-copy="${order.ref}" class="rounded-2xl border border-ink/12 bg-white px-7 py-3.5 text-[14.5px] font-semibold text-ink transition hover:border-terra hover:text-terra-600">
+          Copy reference
+        </button>
+      </div>
+
+      <p class="mt-8 text-[12.5px] text-ink-500">Need help? WhatsApp us on <a href="tel:+255700000000" class="font-semibold text-terra-600">+255 700 000 000</a> referencing your order number.</p>
+    </div>`;
+}
+
+/* ---------- 7. TESTIMONIALS ---------- */
+
+let tIndex = 0;
+let tTimer;
+
+function renderTestimonials() {
+  $('#testimonialTrack').innerHTML = testimonials.map(t => `
+    <div class="w-full shrink-0 px-0.5">
+      <div class="rounded-4xl border border-ink/8 bg-white p-8 shadow-soft sm:p-12">
+        <div class="flex items-center justify-between">
+          ${starMarkup(t.rating, 'w-5 h-5')}
+          <svg viewBox="0 0 24 24" class="h-9 w-9 text-terra/20" fill="currentColor"><path d="M9.5 5C6.5 6.6 4.8 9.3 4.8 12.6c0 3.6 2 6.4 5 6.4 2.3 0 4-1.6 4-3.8 0-2.1-1.5-3.6-3.5-3.6-.4 0-.8 0-1.1.2.4-1.7 1.8-3.3 3.8-4.3L9.5 5Zm9 0c-3 1.6-4.7 4.3-4.7 7.6 0 3.6 2 6.4 5 6.4 2.3 0 4-1.6 4-3.8 0-2.1-1.5-3.6-3.5-3.6-.4 0-.8 0-1.1.2.4-1.7 1.8-3.3 3.8-4.3L18.5 5Z"/></svg>
+        </div>
+        <blockquote class="mt-7 font-display text-[20px] leading-[1.5] text-ink sm:text-[24px] sm:leading-[1.45]">
+          “${t.quote}”
+        </blockquote>
+        <div class="mt-8 flex items-center gap-4">
+          <img src="${t.avatar}" alt="${t.name}" class="h-12 w-12 rounded-full object-cover ring-2 ring-cream-300" />
+          <div>
+            <p class="text-[14.5px] font-semibold text-ink">${t.name}</p>
+            <p class="text-[12.5px] text-ink-500">${t.role}</p>
+          </div>
+        </div>
+      </div>
+    </div>`).join('');
+
+  $('#tDots').innerHTML = testimonials.map((_, i) =>
+    `<button type="button" data-dot="${i}" aria-label="Go to testimonial ${i + 1}"
+      class="h-2 rounded-full transition-all duration-400 ${i === 0 ? 'w-7 bg-terra' : 'w-2 bg-ink/20 hover:bg-ink/40'}"></button>`
+  ).join('');
+}
+
+function goToTestimonial(i) {
+  tIndex = (i + testimonials.length) % testimonials.length;
+  $('#testimonialTrack').style.transform = `translateX(-${tIndex * 100}%)`;
+  $$('#tDots button').forEach((dot, idx) => {
+    dot.className = `h-2 rounded-full transition-all duration-400 ${idx === tIndex ? 'w-7 bg-terra' : 'w-2 bg-ink/20 hover:bg-ink/40'}`;
+  });
+}
+
+function startTestimonialAuto() {
+  clearInterval(tTimer);
+  tTimer = setInterval(() => goToTestimonial(tIndex + 1), 7000);
+}
+
+/* ---------- 8. REVEAL OBSERVER ---------- */
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+function observeReveals(root = document) {
+  $$('.reveal', root).forEach(el => {
+    if (!el.classList.contains('in')) revealObserver.observe(el);
+  });
+}
+
+/* ---------- 9. EVENT WIRING ---------- */
+
+document.addEventListener('DOMContentLoaded', () => {
+  $('#year').textContent = new Date().getFullYear();
+
+  renderCategoryChips();
+  renderCatalog();
+  renderCart();
+  updateBadge();
+  renderTestimonials();
+  goToTestimonial(0);
+  startTestimonialAuto();
+  observeReveals();
+
+  /* --- Offers rotator --- */
+  let offerIdx = 0;
+  const rotator = $('#offerRotator');
+  setInterval(() => {
+    rotator.style.opacity = '0';
+    rotator.style.transform = 'translateY(-6px)';
+    setTimeout(() => {
+      offerIdx = (offerIdx + 1) % OFFER_MESSAGES.length;
+      rotator.innerHTML = OFFER_MESSAGES[offerIdx];
+      rotator.style.opacity = '1';
+      rotator.style.transform = 'translateY(0)';
+    }, 420);
+  }, 5200);
+
+  /* --- Mobile menu --- */
+  const mobileMenu = $('#mobileMenu');
+  const menuToggle = $('#menuToggle');
+  let menuOpen = false;
+  function setMenu(open) {
+    menuOpen = open;
+    mobileMenu.style.maxHeight = open ? mobileMenu.scrollHeight + 'px' : '0px';
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.innerHTML = open
+      ? '<svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>'
+      : '<svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>';
+  }
+  menuToggle.addEventListener('click', () => setMenu(!menuOpen));
+  $$('[data-mobile-link]').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+  /* --- Cart open / close --- */
+  $('#cartToggle').addEventListener('click', openCart);
+  $('#cartClose').addEventListener('click', closeCart);
+  $('#continueShoppingBtn').addEventListener('click', closeCart);
+  cartBackdrop.addEventListener('click', closeCart);
+  $('#checkoutBtn').addEventListener('click', openCheckout);
+
+  $('#cartItems').addEventListener('click', (e) => {
+    const removeBtn = e.target.closest('[data-remove]');
+    const incBtn = e.target.closest('[data-inc]');
+    const decBtn = e.target.closest('[data-dec]');
+    const cont = e.target.closest('[data-continue]');
+
+    if (removeBtn) {
+      cart = cart.filter(i => i.key !== removeBtn.dataset.remove);
+      renderCart(); updateBadge();
+      toast('Item removed');
+    }
+    if (incBtn) {
+      const item = cart.find(i => i.key === incBtn.dataset.inc);
+      if (item) { item.qty += 1; renderCart(); updateBadge(); }
+    }
+    if (decBtn) {
+      const item = cart.find(i => i.key === decBtn.dataset.dec);
+      if (item) {
+        item.qty -= 1;
+        if (item.qty <= 0) cart = cart.filter(i => i.key !== item.key);
+        renderCart(); updateBadge();
+      }
+    }
+    if (cont) closeCart();
+  });
+
+  /* --- Catalog: filters, search, quick add, open product --- */
+  $('#categoryChips').addEventListener('click', (e) => {
+    const chip = e.target.closest('[data-category]');
+    if (!chip) return;
+    state.category = chip.dataset.category;
+    renderCategoryChips();
+    renderCatalog();
+  });
+
+  $('#sortSelect').addEventListener('change', (e) => {
+    state.sort = e.target.value;
+    renderCatalog();
+  });
+
+  let searchTimer;
+  $('#searchInput').addEventListener('input', (e) => {
+    clearTimeout(searchTimer);
+    const val = e.target.value;
+    searchTimer = setTimeout(() => { state.query = val; renderCatalog(); }, 180);
+  });
+
+  $('#clearFilters').addEventListener('click', () => {
+    state.category = 'All'; state.sort = 'featured'; state.query = '';
+    $('#searchInput').value = '';
+    $('#sortSelect').value = 'featured';
+    renderCategoryChips();
+    renderCatalog();
+  });
+
+  document.body.addEventListener('click', (e) => {
+    const quickAdd = e.target.closest('[data-quick-add]');
+    const openBtn  = e.target.closest('[data-open-product]');
+
+    if (quickAdd) {
+      const p = products.find(x => x.id === quickAdd.dataset.quickAdd);
+      if (p) {
+        addToCart(p.id, p.sizes[Math.min(2, p.sizes.length - 1)], p.colors[0].name, 1);
+        toast(`${p.name} added to cart`);
+      }
+      return;
+    }
+    if (openBtn) { openProduct(openBtn.dataset.openProduct); }
+  });
+
+  /* --- Product modal --- */
+  $$('[data-close-product]').forEach(el => el.addEventListener('click', closeProduct));
+
+  $('#productContent').addEventListener('click', (e) => {
+    const sizeBtn  = e.target.closest('[data-size]');
+    const colorBtn = e.target.closest('[data-color]');
+    const qtyBtn   = e.target.closest('[data-qty]');
+    const thumbBtn = e.target.closest('[data-thumb]');
+    const addBtn   = e.target.closest('[data-add-to-cart]');
+    const buyBtn   = e.target.closest('[data-buy-now]');
+
+    if (sizeBtn) { selectedSize = sizeBtn.dataset.size; renderProductDetail(); return; }
+    if (colorBtn) { selectedColor = colorBtn.dataset.color; renderProductDetail(); return; }
+    if (qtyBtn) {
+      detailQty = Math.max(1, Math.min(10, detailQty + Number(qtyBtn.dataset.qty)));
+      $('#detailQty').textContent = detailQty;
+      return;
+    }
+    if (thumbBtn) {
+      galleryIndex = Number(thumbBtn.dataset.thumb);
+      renderProductDetail();
+      return;
+    }
+    if (addBtn) {
+      addToCart(currentProduct.id, selectedSize, selectedColor, detailQty);
+      toast(`${currentProduct.name} added to cart`);
+      closeProduct();
+      setTimeout(openCart, 240);
+      return;
+    }
+    if (buyBtn) {
+      addToCart(currentProduct.id, selectedSize, selectedColor, detailQty);
+      closeProduct();
+      setTimeout(openCheckout, 200);
+      return;
+    }
+  });
+
+  /* --- Checkout --- */
+  $$('[data-close-checkout]').forEach(el => el.addEventListener('click', closeCheckout));
+  $('#checkoutOverlay').addEventListener('click', (e) => {
+    if (e.target === $('#checkoutOverlay')) closeCheckout();
+  });
+
+  document.body.addEventListener('change', (e) => {
+    const radio = e.target.closest('[data-payment]');
+    if (radio) { selectedPayment = radio.value; updatePaymentFields(); }
+  });
+
+  document.body.addEventListener('submit', (e) => {
+    if (e.target.id !== 'checkoutForm') return;
+    e.preventDefault();
+
+    if (!e.target.checkValidity()) { e.target.reportValidity(); return; }
+
+    if (selectedPayment === 'card') {
+      const num = $('#cardNumber').value.trim();
+      if (num.replace(/\s/g, '').length < 13) { toast('Please enter a valid card number'); $('#cardNumber').focus(); return; }
+    }
+    if (['momo', 'tigo', 'airtel', 'halo'].includes(selectedPayment)) {
+      const phone = $('#momoNumber').value.trim();
+      if (phone.length < 9) { toast('Please enter your mobile money number'); $('#momoNumber').focus(); return; }
+    }
+
+    const btn = $('#placeOrderBtn');
+    if (btn) {
+      btn.disabled = true;
+      btn.innerHTML = `<span class="inline-flex items-center gap-2.5"><svg class="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="rgba(255,255,255,.35)" stroke-width="3"/><path d="M21 12a9 9 0 0 0-9-9" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg> Processing payment…</span>`;
+    }
+
+    const paymentLabels = {
+      momo: 'M-Pesa (Vodacom)',
+      tigo: 'Mixx by Yas (Tigo Pesa)',
+      airtel: 'Airtel Money',
+      halo: 'HaloPesa',
+      card: 'Credit / Debit Card',
+      cash: 'Cash on Delivery'
+    };
+
+    const summaryHTML = orderSummaryMarkup();
+
+    setTimeout(() => {
+      const order = {
+        ref: generateReference(),
+        name: $('#ckName').value.trim(),
+        email: $('#ckEmail').value.trim(),
+        address: `${$('#ckAddress').value.trim()}, ${$('#ckCity').value.trim()}`,
+        payment: paymentLabels[selectedPayment],
+        eta: selectedPayment === 'cash' ? '1–2 business days' : '1–3 business days',
+        summary: summaryHTML
+      };
+
+      cart = [];
+      renderCart();
+      updateBadge();
+      renderConfirmation(order);
+      $('#checkoutOverlay').scrollTop = 0;
+      toast(`Order ${order.ref} placed successfully`);
+    }, 1500);
+  });
+
+  /* --- Copy promo codes / references --- */
+  document.body.addEventListener('click', (e) => {
+    const copyBtn = e.target.closest('[data-copy]');
+    if (!copyBtn) return;
+    const text = copyBtn.dataset.copy;
+    navigator.clipboard?.writeText(text).then(
+      () => toast(`Copied: ${text}`),
+      () => toast('Copy failed — please copy manually')
+    );
+  });
+
+  /* --- Testimonials controls --- */
+  $('#tNext').addEventListener('click', () => { goToTestimonial(tIndex + 1); startTestimonialAuto(); });
+  $('#tPrev').addEventListener('click', () => { goToTestimonial(tIndex - 1); startTestimonialAuto(); });
+  $('#tDots').addEventListener('click', (e) => {
+    const dot = e.target.closest('[data-dot]');
+    if (dot) { goToTestimonial(Number(dot.dataset.dot)); startTestimonialAuto(); }
+  });
+
+  /* --- Newsletter --- */
+  $('#newsletterForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = $('#newsletterEmail').value.trim();
+    if (!email) return;
+    toast('Welcome! Your TZS 15,000 code: REGI15K');
+    e.target.reset();
+  });
+
+  /* --- Escape closes overlays --- */
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    if (!$('#productOverlay').classList.contains('hidden')) { closeProduct(); return; }
+    if (!$('#checkoutOverlay').classList.contains('hidden')) { closeCheckout(); return; }
+    if (!$('#cartDrawer').classList.contains('translate-x-full')) { closeCart(); return; }
+    if (menuOpen) setMenu(false);
+  });
+
+  /* --- Recompute mobile menu height on resize --- */
+  window.addEventListener('resize', () => {
+    if (menuOpen) mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+  });
+});
+</script>
+</body>
+</html>
